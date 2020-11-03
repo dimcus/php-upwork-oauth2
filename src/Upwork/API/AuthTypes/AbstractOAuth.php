@@ -146,7 +146,8 @@ abstract class AbstractOAuth
 
             if (self::$_mode === 'web') {
                 // authorize web application via browser
-                header('Location: ' . $authUrl);
+                //header('Location: ' . $authUrl);
+		print '<a href="'.$authUrl.'">Go to upwork and allow access</a>';
             } elseif (self::$_mode === 'nonweb') {
                 // authorize nonweb application
                 ApiDebug::p('found [nonweb] mode, need to authorize application manually');
